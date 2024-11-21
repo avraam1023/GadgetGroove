@@ -1,0 +1,58 @@
+.main-contaner {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #767677;
+}
+
+.ipad-section {
+  width: 100%;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.img-container img {
+  width: 100%;
+  height: 100vh;
+  object-position: center;
+  object-fit: cover;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.title h1 {
+  font-size: 3rem;
+}
+
+.title h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.more-info-container {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.more-info-container a {
+  all: unset;
+  padding: 14px 18px;
+  border: 1px solid rgb(0, 135, 253);
+  color: rgb(0, 135, 253);
+  border-radius: 24px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.more-info-container a:hover {
+  color: #fff;
+  background-color: rgb(0, 135, 253);
+}

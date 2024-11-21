@@ -1,0 +1,8 @@
+<div class="new-products-section">
+  <h1 class="section-title">New Products</h1>
+  <div class="grid-container">
+    @for( product of newProducts$ | async; track product) {
+    <app-product-card [product]="product"></app-product-card>
+    }
+  </div>
+</div>

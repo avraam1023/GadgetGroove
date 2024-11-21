@@ -1,0 +1,138 @@
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #e3f2fd, #f9f9f9);
+}
+
+.sign-in-container {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.sign-in {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  gap: 20px;
+  text-align: center;
+}
+
+.sign-in h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.75rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.sign-in-btn {
+  background: linear-gradient(to right, #4a90e2, #007aff);
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-btn:hover {
+  background: linear-gradient(to right, #007aff, #4a90e2);
+  transform: scale(1.05);
+}
+
+.sign-in p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #007aff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.sign-up {
+  width: 50%;
+  background-image: url("https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone_11-rosette-family-lineup-091019_big.jpg.large.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 20px;
+}
+
+.sign-up h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.sign-up p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.sign-up-btn {
+  width: 60%;
+  padding: 0.75rem;
+  border-radius: 25px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+}
+
+.sign-up-btn:hover {
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  transform: scale(1.05);
+}
+
+.required-message {
+  color: red;
+  font-size: 12px;
+  text-align: start;
+}

@@ -1,0 +1,24 @@
+<div class="slider-container">
+  @for(slide of images; track slide; let i = $index) {
+  <div
+    class="slider-item"
+    [ngClass]="{
+      selected: i === selectedIndex,
+      prev: i === selectedIndex - 1,
+      next: i === selectedIndex + 1,
+      hideLeft: i < selectedIndex - 1,
+      hideRight: i > selectedIndex + 1
+    }"
+  >
+    <img
+      [src]="slide.imgSrc"
+      [alt]="slide.imgAlt"
+      class="slider-img"
+      (panright)="showPrev()"
+      (panleft)="showNext()"
+    />
+  </div>
+  }
+  <button class="nav-button prev-button" (click)="showPrev()">&#10094;</button>
+  <button class="nav-button next-button" (click)="showNext()">&#10095;</button>
+</div>

@@ -1,0 +1,52 @@
+<div class="main-container">
+  <div class="sign-in-container">
+    <div class="sign-in">
+      <h2>Sign In</h2>
+      <form [formGroup]="signInForm">
+        <!--Email-->
+        <input type="email" placeholder="Email" formControlName="email" />
+        @if(controls.email.dirty && controls.email.errors?.['email']) {
+        <div class="required-message">Should contain email address</div>
+        @if(controls.email.errors?.['required']) {
+        <div class="required-message">Email is required</div>
+        } }
+
+        <!--Password-->
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        @if(controls.password.dirty && controls.password.errors?.['required']) {
+        <div class="required-message">Password is required</div>
+        }
+
+        <button
+          class="sign-in-btn"
+          type="button"
+          [disabled]="signInForm.invalid"
+          [ngStyle]="
+            signInForm.invalid
+              ? { background: '#8fc3ff', cursor: 'no-drop' }
+              : null
+          "
+          (click)="onSignIn()"
+        >
+          Sign In
+        </button>
+      </form>
+      <p>
+        Don't have an account?
+        <a routerLink="/auth/sign-up">Sign Up</a>
+      </p>
+    </div>
+
+    <div class="sign-up">
+      <h2>Register</h2>
+      <p>
+        Register with your personal details to use all of the site's features
+      </p>
+      <button class="sign-up-btn" routerLink="/auth/sign-up">Sign Up</button>
+    </div>
+  </div>
+</div>

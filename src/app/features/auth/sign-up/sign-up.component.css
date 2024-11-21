@@ -1,0 +1,154 @@
+.main-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #e3f2fd, #f9f9f9);
+  padding-top: 70px;
+}
+
+.sign-in-container {
+  display: flex;
+  width: 850px;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.sign-in {
+  width: 50%;
+  background-image: url("https://www.apple.com/newsroom/images/product/iphone/standard/Apple_iphone_11-rosette-family-lineup-091019_big.jpg.large.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 20px 20px 0;
+  gap: 20px;
+  backdrop-filter: brightness(0.9);
+}
+
+.sign-in h2 {
+  margin-top: 60px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.sign-in h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.sign-in p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.separator {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 1rem 0;
+  border: none;
+}
+
+.sign-in-btn {
+  width: 60%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sign-in-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+}
+
+.help-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.help-link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.sign-up {
+  width: 50%;
+  background-color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: 20px 0 0 20px;
+}
+
+.sign-up h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-up-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 25px;
+  background: linear-gradient(to right, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+}
+
+.sign-up-btn:hover {
+  background: linear-gradient(to right, #dd2476, #ff512f);
+  transform: scale(1.05);
+}
+
+.required-message {
+  color: red;
+  font-size: 12px;
+}

@@ -1,0 +1,119 @@
+<div class="main-container">
+  <div class="sign-in-container">
+    <div class="sign-in">
+      <h2>GadgetGroove</h2>
+      <h3>Welcome Back!</h3>
+      <p>Enter your personal details to use all of the site's features</p>
+      <hr class="separator" />
+      <button class="sign-in-btn" routerLink="/auth/sign-in">Sign In</button>
+      <a class="help-link">Need Help?</a>
+    </div>
+
+    <div class="sign-up">
+      <h2>Register</h2>
+      <form [formGroup]="signUpFomrs">
+        <!--First Name-->
+        <input
+          type="text"
+          placeholder="First Name"
+          formControlName="firstName"
+        />
+        @if(controls.firstName.dirty) {
+        @if(controls.firstName.errors?.['maxlength']) {
+        <div class="required-message">
+          Max length should be:
+          {{controls.firstName.errors?.['maxlength']['requiredLength']}}, actual
+          length :
+          {{controls.firstName.errors?.['maxlength']['actualLength']}}
+        </div>
+        } @if(controls.firstName.errors?.["required"]) {
+        <div class="required-message">Name is required</div>
+        }}
+
+        <!--Last Name-->
+        <input type="text" placeholder="Last Name" formControlName="lastName" />
+        @if(controls.lastName.dirty) {
+        @if(controls.lastName.errors?.['maxlength']) {
+        <div class="required-message">
+          Max length should be:
+          {{controls.lastName.errors?.['maxlength']['requiredLength']}}, actual
+          length :
+          {{controls.lastName.errors?.['maxlength']['actualLength']}}
+        </div>
+        } @if(controls.lastName.errors?.["required"]) {
+        <div class="required-message">Last name is required</div>
+        }}
+
+        <!--Email-->
+        <input type="email" placeholder="Email" formControlName="email" />
+        @if(controls.email.dirty) { @if(controls.email.errors?.['email']) {
+        <div class="required-message">Should contain email address</div>
+        } @if(controls.email.errors?.["required"]) {
+        <div class="required-message">Email is required</div>
+        } }
+
+        <!--Gender-->
+        <select formControlName="gender">
+          <option value="" disabled selected>Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        @if(controls.gender.dirty && controls.gender.errors?.['required']){
+        <div class="required-message">Gender is required</div>
+        }
+
+        <!--Phone-->
+        <input
+          type="text"
+          placeholder="Phone"
+          formControlName="phoneNumber"
+          maxlength="13"
+        />
+        @if(controls.phoneNumber.dirty &&
+        controls.phoneNumber.errors?.['required']) {
+        <div class="required-message">Gender is required</div>
+        }
+
+        <!--Password-->
+        <input
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        @if(controls.password.dirty && controls.password.errors?.['required']) {
+        <div class="required-message">Password is required</div>
+        }
+
+        <!--Confirm password-->
+        <input
+          type="password"
+          placeholder="Confirm Password"
+          formControlName="confirmPassword"
+        />
+        @if(controls.confirmPassword.dirty &&
+        controls.confirmPassword.errors?.['confirmPassword']) {
+        <div class="required-message">
+          message
+          {{controls.confirmPassword.errors?.['confirmPassword']}}
+        </div>
+        }
+
+        <button
+          class="sign-up-btn"
+          [disabled]="signUpFomrs.invalid"
+          [ngStyle]="
+            signUpFomrs.invalid
+              ? {
+                  background: 'linear-gradient(to right, #ff522fbe, #dd24777c)',
+                  cursor: 'no-drop'
+                }
+              : null
+          "
+          (click)="onSignUp()"
+        >
+          Sign Up
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
