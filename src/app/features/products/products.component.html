@@ -1,1 +1,30 @@
-<p>products works!</p>
+<div class="main-container">
+  <!-- Filter Section -->
+  <div class="filter-container">
+    <h3>Brands</h3>
+    <ul>
+      <li>
+        <label>
+          <input type="checkbox" [checked]="selectedBrands.length === 0" />
+          All
+        </label>
+      </li>
+      <ng-container *ngIf="brands$ | async as brands">
+        <li *ngFor="let brand of brands">
+          <label>
+            <input type="checkbox" [checked]="selectedBrands.includes(brand)" />
+            {{ brand }}
+          </label>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <div class="product-grid">
+    <ng-container *ngIf="allProducts$ | async as products">
+      <ng-container *ngFor="let product of products">
+        <app-product-card [product]="product"></app-product-card>
+      </ng-container>
+    </ng-container>
+  </div>
+</div>

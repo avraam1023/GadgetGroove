@@ -1,1 +1,53 @@
-<p>product-details works!</p>
+@if(product$ | async; as product) {
+<div class="product-details-page">
+  <div class="product-header">
+    <h1>{{ product.title }}</h1>
+    <p class="category">Category: {{ product.category.mame }}</p>
+  </div>
+
+  <div class="product-details-container">
+    <div class="product-images">
+      <div class="main-thumbnail">
+        <img [src]="images" [alt]="product.title" />
+      </div>
+      <div class="additional-images">
+        @for(img of product.images; track img) {
+        <img [src]="img" [alt]="product.title" (click)="changeMainImage(img)" />
+        }
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h2 class="price">
+        {{ product.price.currency }} {{ product.price.current }}
+        @if(product.price.beforeDiscount > product.price.current) {
+        <span class="before-discount">
+          {{ product.price.currency }} {{ product.price.beforeDiscount }}
+        </span>
+        } @if(product.price.discountPercentage > 0) {
+        <span class="discount">
+          ({{ product.price.discountPercentage }}% off)
+        </span>
+        }
+      </h2>
+
+      <p class="brand">Brand: {{ product.brand }}</p>
+      <p class="rating">Rating: {{ product.rating }} / 5</p>
+      <p class="stock" [ngClass]="{ 'out-of-stock': product.stock === 0 }">
+        {{ product.stock > 0 ? product.stock + " in stock" : "Out of stock" }}
+      </p>
+      <p class="description">{{ product.description }}</p>
+      <p class="warranty">Warranty: {{ product.warranty }} years</p>
+
+      <button
+        class="add-to-cart-btn"
+        [disabled]="product.stock === 0"
+        (click)="addToCart(product)"
+        [routerLink]="['/auth/sign-in']"
+      >
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</div>
+}

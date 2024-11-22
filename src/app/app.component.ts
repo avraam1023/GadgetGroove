@@ -3,6 +3,7 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { HomeComponent } from './features/home/home.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
+import { ContactComponent } from './shared/components/contact/contact.component';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     HomeComponent,
     RouterLink,
     FooterComponent,
+    ContactComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

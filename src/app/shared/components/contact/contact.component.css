@@ -1,0 +1,78 @@
+.contact-container {
+  width: 800px;
+  margin: 3rem auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+}
+
+.contact-item {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 350px;
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.store-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.hours,
+.phone {
+  font-size: 0.95rem;
+  color: #666;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.material-icons {
+  font-size: 1.1rem;
+  color: #007bff;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin: 2rem 0;
+}

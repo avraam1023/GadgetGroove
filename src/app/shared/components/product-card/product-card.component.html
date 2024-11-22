@@ -26,9 +26,17 @@
     <button
       class="add-to-cart-btn"
       [disabled]="product.stock === 0"
-      (click)="addToCart(product)"
+      routerLink="/auth/sign-in"
     >
       Add to Cart
+    </button>
+    <button
+      class="add-to-cart-btn"
+      style="background: gray; margin-top: 12px"
+      [disabled]="product.stock === 0"
+      [routerLink]="['/products/product-details', product._id]"
+    >
+      details
     </button>
   </div>
 </div>

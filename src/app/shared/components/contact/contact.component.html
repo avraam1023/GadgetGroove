@@ -1,0 +1,50 @@
+<div class="contact-container">
+  <h1>Contact Us</h1>
+  <div class="contact-grid">
+    @for(store of stores; track store) {
+    <div class="contact-item">
+      <h3>
+        <span class="store-name">GadgetGroove | {{ store.name }}</span>
+      </h3>
+      <p class="hours">
+        <i class="material-icons">access_time</i> {{ store.days }},
+        {{ store.hours }}
+      </p>
+      <p class="phone">
+        <i class="material-icons">phone</i>
+        <a [href]="'tel:' + store.phone">{{ store.phone }}</a>
+      </p>
+    </div>
+    }
+  </div>
+  <div class="map-container">
+    <div class="mapswrapper">
+      <iframe
+        width="800"
+        height="400"
+        loading="lazy"
+        allowfullscreen
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Tbilisi&zoom=10&maptype=roadmap"
+      ></iframe
+      ><a href="https://www.fluxpromptgenerator.net">Ai Prompt Generator</a
+      ><style>
+        .mapswrapper {
+          background: #fff;
+          position: relative;
+        }
+        .mapswrapper iframe {
+          border: 0;
+          position: relative;
+          z-index: 2;
+        }
+        .mapswrapper a {
+          color: rgba(0, 0, 0, 0);
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 0;
+        }
+      </style>
+    </div>
+  </div>
+</div>

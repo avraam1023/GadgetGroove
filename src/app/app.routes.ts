@@ -3,6 +3,7 @@ import { HomeComponent } from './features/home/home.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { ProductsComponent } from './features/products/products.component';
 import { ProductDetailsComponent } from './features/product-details/product-details.component';
+import { SupportComponent } from './features/support/support.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -14,7 +15,7 @@ export const routes: Routes = [
         (products) => products.ProductsComponent
       ),
   },
-  { path: 'products/product-detail/:id', component: ProductDetailsComponent },
+  { path: 'products/product-details/:id', component: ProductDetailsComponent },
   {
     path: 'services',
     loadComponent: () =>
@@ -22,6 +23,7 @@ export const routes: Routes = [
         (service) => service.ServicesComponent
       ),
   },
+  { path: 'support', component: SupportComponent },
   {
     path: 'auth',
     loadChildren: () =>
